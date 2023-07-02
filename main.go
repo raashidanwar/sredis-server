@@ -13,7 +13,6 @@ func getHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	key := r.URL.Query().Get("key")
-	fmt.Println(key)
 	value := store[key]
 	if value == "" {
 		w.WriteHeader(http.StatusNoContent)
